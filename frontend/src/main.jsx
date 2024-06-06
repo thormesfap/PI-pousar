@@ -175,7 +175,7 @@ const router = createBrowserRouter([
 
 ]);
 
-const googleId = process.env.CLIENT_ID;
+const googleId = process.env.GOOGLE_ID;
 console.log(googleId)
 console.log(JSON.stringify(process.env))
 
