@@ -38,7 +38,7 @@ const FormBusca = ({ onSubmit }) => {
           noValidate
           autoComplete="off"
         >
-          <div className="flex flex-col sm:flex-row items-start gap-5">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
             <SelectAeroporto
               name="origem"
               id="origem"

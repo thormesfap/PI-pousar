@@ -56,7 +56,7 @@ function CadastroCia() {
             onSubmit={(e) => e.preventDefault()}
             noValidate
             autoComplete="off"
-            className="flex  justify-center items-center flex-col w-[50%]  px-5"
+            className="flex  justify-center items-center flex-col w-full sm:w-[50%]  px-5"
           >
             <div className=" py-7">
               <h1 className="text-[#2B3674] text-4xl ">Registre sua conta empresarial</h1>
@@ -203,7 +203,7 @@ function CadastroCia() {
             
           
           </form>
-          <div className="w-[50%] flex justify-center items-center  bg-[url(/images/cia-registrar.jpg)] bg-cover bg-no-repeat rounded-bl-[150px] rounded-tl-[15px]">
+          <div className="hidden w-[50%] sm:flex justify-center items-center  bg-[url(/images/cia-registrar.jpg)] bg-cover bg-no-repeat rounded-bl-[150px] rounded-tl-[15px]">
             <img src="/images/logo-Pousar.png"></img>
           </div>
         </FormProvider>

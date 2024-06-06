@@ -15,7 +15,7 @@ export const Input = ({ label, labelColor, type, id, placeholder, validation, na
 
 
   return (
-    <div>
+    <div className="w-full">
       <div>
         <label htmlFor={id} className={`text-[#${labelColor ? labelColor : '2B3674'}] font-medium`}>
           {label}

@@ -46,18 +46,18 @@ function CadastroUsuario() {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -300, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex justify-between gap-5 h-screen"
+        className="flex justify-between gap-5 sm:h-screen"
       >
         <FormProvider {...methods}>
           {processando ? <Loading /> : null}
-          <div className="w-[50%] flex justify-center items-center  bg-[url(/images/LoginIMG.jpg)] bg-cover bg-no-repeat rounded-br-[150px]">
+          <div className="hidden w-[50%] sm:flex justify-center items-center  bg-[url(/images/LoginIMG.jpg)] bg-cover bg-no-repeat rounded-br-[150px]">
             <img src="/images/logo-Pousar.png"></img>
           </div>
           <form
             onSubmit={(e) => e.preventDefault()}
             noValidate
             autoComplete="off"
-            className="flex  justify-center items-center flex-col w-[50%]  px-5"
+            className="flex  justify-center items-center flex-col w-full sm:w-[50%]  px-5"
           >
             <div className="flex flex-col gap-2">
 
@@ -84,7 +84,7 @@ function CadastroUsuario() {
                   required: { value: true, message: "Campo Obrigatório" },
                 }}
               />
-              <div className="flex gap-5 w-full justify-between items-center">
+              <div className="flex flex-col sm:flex-row gap-5 w-full justify-between items-center">
                 <InputPassword
                   id="password"
                   label="Senha*"
@@ -161,7 +161,7 @@ function CadastroUsuario() {
                   className="border flex items-center justify-between h-14 px-5 rounded-2xl w-full"
                 />
               </div>
-              <div className="flex  justify-between items-end">
+              <div className="flex gap-2 justify-between items-end">
                   <Input
                     label="Município"
                     type="text"
@@ -169,7 +169,7 @@ function CadastroUsuario() {
                     placeholder="Juazeiro do Norte"
                     name="municipio"
                   />
-                  <div className="w-[50%] h">
+                  <div className="w-[50%]">
                     <h2 className="text-[#2B3674] font-semibold ">UF</h2>
                     <select
                       name="uf"

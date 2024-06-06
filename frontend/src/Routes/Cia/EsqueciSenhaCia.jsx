@@ -88,7 +88,7 @@ function EsqueciSenhaCia() {
     <AnimatePresence>
       <motion.div
         key="login"
-        className="flex justify-between overflow-hidden h-screen"
+        className="flex justify-between overflow-hidden p-5 sm:h-screen"
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 300, opacity: 1 }}
@@ -97,22 +97,22 @@ function EsqueciSenhaCia() {
         <FormProvider {...methods}>
           <form
             onSubmit={onSubmit}
-            className="flex justify-center items-center w-[50%]"
+            className="flex justify-center items-center w-full sm:w-[50%]"
           >
             <div className=" min-w-[27vw]">
               {msgErro()}
               <h1 className="text-[#2B3674] text-4xl ">Esqueceu a Senha?</h1>
               <p className="text-gray-400 my-7">
-                Para redefinir sua senha, digite seu endereço de email ou nome
+                Para redefinir sua senha, digite seu nome
                 do usuário abaixo.
               </p>
               <div className="flex flex-col gap-3">
                 <input type="hidden" name="token"></input>
                 <Input
-                  label="Login ou Email*"
+                  label="Login*"
                   type="text"
                   id="login"
-                  placeholder="Login ou Email"
+                  placeholder="Login"
                   name="login"
                   validation={{
                     required: { value: true, message: "Campo Obrigatório" },
@@ -129,7 +129,7 @@ function EsqueciSenhaCia() {
           </form>
         </FormProvider>
         {processando ? <Loading /> : null}
-        <div className="w-[50%] h-[100%] flex justify-center items-center rounded-bl-[150px] rounded-tl-lg bg-[url(/images/cia-forget.jpg)] bg-cover bg-no-repeat">
+        <div className="w-[50%] h-[100%] hidden sm:flex justify-center items-center rounded-bl-[150px] rounded-tl-lg bg-[url(/images/cia-forget.jpg)] bg-cover bg-no-repeat">
           <img src="/images/logo-Pousar.png"></img>
         </div>
       </motion.div>

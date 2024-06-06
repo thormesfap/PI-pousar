@@ -120,7 +120,7 @@ function TelaLogin() {
   }
 
   return (
-    <div className="flex justify-between overflow-hidden h-screen">
+    <div className="flex justify-between overflow-hidden md:h-screen">
     
     
         <form
@@ -208,7 +208,7 @@ function TelaLogin() {
         {processando ? <Loading /> : null}
         <AnimatePresence>
       <motion.div
-        className="w-full"
+        className="md:w-full"
         key="login"
         initial={{ x: -1000, opacity: 0.8 }}
         animate={{ x: [-1000, -900, 0,], opacity: 1 }}
@@ -218,7 +218,7 @@ function TelaLogin() {
           
          }}
       >
-        <div className="h-[100%] flex justify-center items-center rounded-bl-[150px]  bg-[url(/images/LoginIMG.jpg)] bg-cover bg-no-repeat">
+        <div className="hidden h-[100%] sm:flex justify-center items-center rounded-bl-[150px]  bg-[url(/images/LoginIMG.jpg)] bg-cover bg-no-repeat">
           <img src="/images/logo-Pousar.png"></img>
         </div>
       </motion.div>

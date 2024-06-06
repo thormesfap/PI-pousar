@@ -92,7 +92,7 @@ function TrocaSenha() {
     <AnimatePresence>
       <motion.div
         key="login"
-        className="flex justify-between overflow-hidden h-screen"
+        className="flex justify-between overflow-hidden sm:h-screen"
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 300, opacity: 1 }}
@@ -101,7 +101,7 @@ function TrocaSenha() {
         <FormProvider {...methods}>
           <form
             onSubmit={onSubmit}
-            className="flex justify-center items-center w-[50%]"
+            className="flex justify-center items-center w-full sm:w-[50%]"
           >
             <div className=" min-w-[27vw]">
               {msgErro()}
@@ -164,7 +164,7 @@ function TrocaSenha() {
           </form>
         </FormProvider>
         {processando ? <Loading /> : null}
-        <div className="w-[50%] h-[100%] flex justify-center items-center rounded-bl-[150px] rounded-tl-lg bg-[url(/images/LoginIMG.jpg)] bg-cover bg-no-repeat">
+        <div className="w-[50%] h-[100%] hidden sm:flex justify-center items-center rounded-bl-[150px] rounded-tl-lg bg-[url(/images/LoginIMG.jpg)] bg-cover bg-no-repeat">
           <img src="/images/logo-Pousar.png"></img>
         </div>
       </motion.div>

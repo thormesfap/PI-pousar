@@ -36,7 +36,7 @@ function Home() {
             Compre tudo para sua viagem com Pousar
           </h2>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between  gap-4 h-full w-full sm:w-[60%]">
+        <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 h-full w-full sm:w-[60%]">
           <div className="flex flex-col min-h-full p-10 bg-white max-w-[90%] sm:max-w-[30%] rounded-2xl shadow-lg">
             <h2 className="text-[14px] text-[#343A3D] font-bold mb-4">
               Como encontrar passagens na Pousar?
