@@ -175,10 +175,11 @@ const router = createBrowserRouter([
 
 ]);
 
-
+const googleId = process.env.googleId;
+console.log(googleId)
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <GoogleOAuthProvider clientId={process.env.googleId}>
+  <GoogleOAuthProvider clientId={googleId}>
     <LoginContextProvider
       value={{ isLoggedIn: false, setIsLoggedIn: () => {} }}
     >
