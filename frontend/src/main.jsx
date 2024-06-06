@@ -180,7 +180,7 @@ console.log(googleId)
 console.log(JSON.stringify(process.env))
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <GoogleOAuthProvider clientId={googleId}>
+  <GoogleOAuthProvider clientId="281233610259-vsqo5aa6f691e03she2k2tk2aqk9m48t.apps.googleusercontent.com">
     <LoginContextProvider
       value={{ isLoggedIn: false, setIsLoggedIn: () => {} }}
     >

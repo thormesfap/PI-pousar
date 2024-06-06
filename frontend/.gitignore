@@ -24,3 +24,4 @@ environment.js
 *.njsproj
 *.sln
 *.sw?
+.vercel
