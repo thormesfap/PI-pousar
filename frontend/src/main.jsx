@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { environment } from '../environment.js';
 
 //Importar Rotas
 
@@ -179,7 +178,7 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <GoogleOAuthProvider clientId={environment.googleId}>
+  <GoogleOAuthProvider clientId={process.env.googleId}>
     <LoginContextProvider
       value={{ isLoggedIn: false, setIsLoggedIn: () => {} }}
     >
