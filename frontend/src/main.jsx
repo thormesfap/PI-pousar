@@ -175,10 +175,6 @@ const router = createBrowserRouter([
 
 ]);
 
-const googleId = process.env.GOOGLE_ID;
-console.log(googleId)
-console.log(JSON.stringify(process.env))
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <GoogleOAuthProvider clientId="281233610259-vsqo5aa6f691e03she2k2tk2aqk9m48t.apps.googleusercontent.com">
     <LoginContextProvider

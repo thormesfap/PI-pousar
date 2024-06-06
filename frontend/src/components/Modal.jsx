@@ -14,11 +14,11 @@ function Modal({ onClose, titulo, children }) {
     }, []);
   return (
     <div className={styles.container} ref={backRef}>
-      <div className="flex flex-col justify-center items-center gap-5 bg-white w-[50%] h-[90vh] p-10 shadow-md rounded-lg">
+      <div className="flex flex-col justify-center items-center gap-5 bg-white w-full sm:w-[50%] h-[90vh] p-10 shadow-md rounded-lg">
         <div className="flex justify-between w-full">
           <div>
           </div>
-          <div className='text-2xl uppercase'>
+          <div className='text-base sm:text-2xl uppercase'>
             {titulo}
           </div>
           <button type="button" onClick={handleClose}>

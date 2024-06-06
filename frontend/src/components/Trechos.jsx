@@ -7,7 +7,7 @@ import { findAeroporto } from "../Services/aeroportos";
 function Trechos({ ciaNome, ciaImg, trechos }) {
   console.log(trechos);
   return (
-    <div className="flex gap-5 flex-col w-full justify-between text-sm font-[400] text-black">
+    <div className="flex text-xs sm:text-base gap-5 flex-col w-full justify-between text-sm font-[400] text-black">
       {trechos.map((trecho) => {
         return mapTrecho(trecho);
       })}
@@ -19,7 +19,7 @@ function Trechos({ ciaNome, ciaImg, trechos }) {
       <>
         {/* DIV Espera */}
         {trecho.espera && (
-          <div className="flex gap-1 items-center justify-center rounded-md bg-gray-200 border-dashed border-2 border-gray-500">
+          <div className="flex md:text-base text-xs text-center p-1 gap-1 items-center justify-center rounded-md bg-gray-200 border-dashed border-2 border-gray-500">
             <FaRegClock />
             <p>
               Espera de {getDuracao(trecho.espera)} em{" "}
@@ -32,7 +32,7 @@ function Trechos({ ciaNome, ciaImg, trechos }) {
           className="flex flex-col gap-1 justify-between border-[1px] border-gray-500 rounded-lg p-2"
         >
           {/* DIV Cia e Aeronave */}
-          <div className="flex justify-between items-center border-b-[1px]">
+          <div className="flex flex-col sm:flex-row justify-between items-center border-b-[1px]">
             <div className="flex items-center gap-5 w-[15%] text-sm">
               <img src={ciaImg} className="h-[50px]" />
               <span>{ciaNome}</span>
@@ -53,7 +53,7 @@ function Trechos({ ciaNome, ciaImg, trechos }) {
                 )}
                 {getDate(trecho.horaSaida)}
               </span>
-              <span className="text-2xl font-medium">
+              <span className="text-base sm:text-2xl font-medium">
                 {getHora(trecho.horaSaida)}
               </span>
               <span>{findAeroporto(trecho.origem).iata}</span>
@@ -73,7 +73,7 @@ function Trechos({ ciaNome, ciaImg, trechos }) {
                 )}
                 {getDate(trecho.horaChegada)}
               </span>
-              <span className="text-2xl font-medium">
+              <span className="text-base sm:text-2xl font-medium">
                 {getHora(trecho.horaChegada)}
               </span>
               <span>{findAeroporto(trecho.destino).iata}</span>

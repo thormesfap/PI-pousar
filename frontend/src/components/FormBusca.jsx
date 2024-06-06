@@ -30,7 +30,7 @@ const FormBusca = ({ onSubmit }) => {
 
   const methods = useForm();
   return (
-    <div className=" w-[90%] ml-auto mr-auto top-16 relative shadow-lg p-10 rounded-3xl bg-white font-[Rubik]">
+    <div className=" w-full sm:w-[90%] mb-8 ml-auto mr-auto shadow-lg p-10 rounded-3xl bg-white font-[Rubik]">
       <h3 className="mb-7 font-medium text-2xl">Busca de Passagens</h3>
       <FormProvider {...methods}>
         <form
@@ -38,7 +38,7 @@ const FormBusca = ({ onSubmit }) => {
           noValidate
           autoComplete="off"
         >
-          <div className="flex items-start gap-5">
+          <div className="flex flex-col sm:flex-row items-start gap-5">
             <SelectAeroporto
               name="origem"
               id="origem"

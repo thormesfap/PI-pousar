@@ -84,7 +84,7 @@ function VooList() {
       {erro && <SnackBar message={erro.message} type="danger"/>}
       <div className="flex flex-col justify-center align-middle">
         <div className="flex m-auto gap-12 items-center">
-          <div className="text-[40px] text-center m-10 font-bold text-[#3758D0]">
+          <div className="text-xl sm:text-[40px] text-center m-10 font-bold text-[#3758D0]">
             Voos disponíveis
           </div>
           <div>
@@ -129,7 +129,7 @@ function VooList() {
     return (
         <div
           key={voo.id}
-          className=" bg-white grid grid-cols-4 gap-10 shadow-lg rounded-lg p-10 mb-2"
+          className="text-[10px] sm:text-base bg-white grid grid-cols-2 md:grid-cols-4 gap-10 shadow-lg rounded-lg p-10 mb-2"
         >
           <span className="flex gap-2 items-center">
             Número: <span className="font-bold">{voo.numero}</span>

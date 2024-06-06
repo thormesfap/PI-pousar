@@ -69,13 +69,13 @@ export function Header() {
             </Link>
           </div>
           <div className="flex gap-5 bg-slate-300 p-3 rounded-b-xl">
-            <Link className=" cursor-default rounded-lg items-center flex gap-2 text-gray-600  px-4 py-2 text-[14px]">
+            <Link className="hidden cursor-default rounded-lg items-center sm:flex gap-2 text-gray-600  px-4 py-2 text-[14px]">
               <img className="h-[18px]" src={IconHeadset} />
               <p >
                 Televendas <strong>0800 616 6161</strong>
               </p>
             </Link>
-            <div className="w-[2px] bg-white rounded-full"></div>
+            <div className=" hidden w-[2px] bg-white rounded-full sm:block"></div>
             {isLoggedIn && loggedUser["@type"] && (
               <>
                 <Link
@@ -107,7 +107,7 @@ export function Header() {
               <img src={IconMalac} />
               <p>Viagens</p>
             </Link>
-            <Link className="rounded-lg text-gray-600 flex items-center px-4 py-2 gap-2">
+            <Link className="hidden rounded-lg text-gray-600 sm:flex items-center px-4 py-2 gap-2">
               <img src={IconAjuda} />
               <p>Ajuda</p>
             </Link>

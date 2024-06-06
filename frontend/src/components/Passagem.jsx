@@ -15,7 +15,7 @@ function Passagem({id, origem, destino, cia, preco, dataIda, dataVolta, link, id
 
   return (
     <div
-      className=" bg-white shadow-xl flex justify-between items-center gap-5 w-3/4 rounded-lg mb-3 p-5 m-auto font-[Rubik]"
+      className=" bg-white shadow-xl flex sm:flex-row flex-col justify-between items-center gap-5 w-3/4 rounded-lg mb-3 p-5 m-auto font-[Rubik]"
       key={id + origem + destino + cia + ida + volta}
     >
       {/* DIV Companhia Aérea (imagem perfil) */}
@@ -25,10 +25,10 @@ function Passagem({id, origem, destino, cia, preco, dataIda, dataVolta, link, id
       </div>
 
       {/* DIV Dados da passagem */}
-      <div className="flex items-center justify-around grow">
+      <div className="flex flex-col gap-3 sm:flex-row justify-center items-center sm:justify-around grow">
         {/* DIV Dados Ida */}
-        <div className="flex flex-col justify-between text-sm font-medium text-[#545962]">
-          <div className="flex gap-2 items-center uppercase">
+        <div className="flex flex-col items-center text-sm font-medium text-[#545962]">
+          <div className="flex gap-2 justify-center items-center uppercase">
             <PiAirplaneTakeoff />
             Ida: {origem}-{destino}
           </div>
@@ -64,7 +64,7 @@ function Passagem({id, origem, destino, cia, preco, dataIda, dataVolta, link, id
 
         {/* DIV Dados Volta */}
         {volta && (
-          <div className="flex flex-col justify-between text-sm font-medium text-[#545962]">
+          <div className="flex flex-col items-center text-sm font-medium text-[#545962]">
             <div className="flex gap-2 items-center uppercase">
               <PiAirplaneLanding />
               Volta: {destino}-{origem}
@@ -103,8 +103,8 @@ function Passagem({id, origem, destino, cia, preco, dataIda, dataVolta, link, id
         )}
       </div>
       {/* DIV Com preço e botão reservar */}
-      <div className=" flex flex-col p-2 border-s-[#DDE1E8] border-s-[1px] ">
-        <div className="border-b-[$DDE1E8] border-b-[1px]">
+      <div className=" flex flex-col p-2 border-s-[#DDE1E8] sm:border-s-[1px] ">
+        <div className="border-b-[$DDE1E8] sm:border-b-[1px]">
           <p className="text-sm">A partir de:</p>
           R$ <span className="text-nowrap text-xl">{preco}</span>
         </div>

@@ -13,9 +13,11 @@ function Home() {
 
   return (
     <div className="bg-[#EEEEEE]">
-      <div className="flex items-end mb-36 bg-[url(/images/plane-view.png)] bg-cover h-[70vh]">
-        <FormBusca onSubmit={handleBusca} />
+      <div className="flex items-end mb-8 bg-[url(/images/plane-view.png)] bg-cover h-[70vh]">
       </div>
+        <div>
+          <FormBusca onSubmit={handleBusca} />
+          </div>
 
       {/* propagandas */}
       <section className="bg-white w-full rounded-lg mt-4">
@@ -34,8 +36,8 @@ function Home() {
             Compre tudo para sua viagem com Pousar
           </h2>
         </div>
-        <div className="flex justify-between h-full  w-[60%] ">
-          <div className="flex flex-col min-h-full p-10 bg-white max-w-[30%] rounded-2xl shadow-lg">
+        <div className="flex flex-col sm:flex-row justify-between  gap-4 h-full w-full sm:w-[60%]">
+          <div className="flex flex-col min-h-full p-10 bg-white max-w-[90%] sm:max-w-[30%] rounded-2xl shadow-lg">
             <h2 className="text-[14px] text-[#343A3D] font-bold mb-4">
               Como encontrar passagens na Pousar?
             </h2>
@@ -48,7 +50,7 @@ function Home() {
               vouchers por e-mail.{" "}
             </p>
           </div>
-          <div className="flex flex-col min-h-full p-10 bg-white max-w-[30%] rounded-2xl shadow-lg">
+          <div className="flex flex-col min-h-full p-10 bg-white max-w-[90%] sm:max-w-[30%] rounded-2xl shadow-lg">
             <h2 className="text-[14px] text-[#343A3D] font-bold mb-4">
               A Pousar é uma empresa confiável?
             </h2>
@@ -62,7 +64,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col min-h-full p-10 bg-white max-w-[30%] rounded-2xl shadow-lg">
+          <div className="flex flex-col min-h-full p-10 bg-white max-w-[90%] sm:max-w-[30%] rounded-2xl shadow-lg">
             <h2 className="text-[14px] text-[#343A3D] font-bold mb-4">
               Por que devo escolher a Pousar para a minha viagem?
             </h2>
@@ -79,7 +81,7 @@ function Home() {
       </section>
 
       <section className=" justify-center flex p-4 rounded-lg mt-4 w-full">
-        <div className="flex flex-col h-full p-10 bg-white max-w-[60%] rounded-2xl shadow-lg">
+        <div className="flex flex-col h-full p-10 bg-white sm:max-w-[60%] rounded-2xl shadow-lg">
           <h2 className="text-2xl text-[#343A3D] font-bold mb-4">
             Faça sua jornada com maior segurança e agilidade
           </h2>
@@ -106,20 +108,20 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-white flex flex-col items-center p-4 rounded-lg mt-4">
+      <section className="bg-white flex flex-col items-center p-4 rounded-lg mt-4 w-full">
         <div className="flex items-center gap-5">
           <div>
             <img src={Icon_Email} />
           </div>
-          <div className=" w-[500px]">
+          <div className="sm:w-[500px]">
             <h2 className="text-[18px] text-[#343A3D] font-bold mb-4">
               Inscreva-se para receber ofertas exclusivas
             </h2>
-            <div className="flex gap-1  w-full  flex-col md:flex-row items-center">
+            <div className="flex gap-1 w-full flex-col md:flex-row items-center">
               <input
                 type="email"
                 placeholder="Digite seu e-mail"
-                className="rounded-lg px-4 py-2 w-[350px] border border-gray-500 mb-2 md:mr-2 md:mb-0"
+                className="rounded-lg px-4 py-2 sm:w-[350px] border border-gray-500 mb-2 md:mr-2 md:mb-0"
               />
               <button className="rounded-full border border-blue-700 text-blue-700 text-sm font-semibold p-2 ">
                 Quero Recebê-las

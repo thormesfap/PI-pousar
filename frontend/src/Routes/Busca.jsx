@@ -50,10 +50,14 @@ function Busca() {
 
   return (
     <div className="bg-[#EEEEEE]">
-      <div className="flex items-end mb-36 bg-[url(/images/plane-view.png)] bg-cover h-[70vh]">
+      <div className="flex items-end mb-8 bg-[url(/images/plane-view.png)] bg-cover h-[30vh] sm:h-[80vh]">
+      </div>
+      <div>
         <FormBusca onSubmit={submitBusca} />
       </div>
+      <div>
         {!processando ? result ? parseResult(result) : null : <Loading />}
+        </div>
     </div>
   );
 

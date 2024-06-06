@@ -33,7 +33,7 @@ function DropDownMenu({ text, links }) {
         </button>
       </div>
       {isOpen && (
-        <div className="absolute top-[6%] bg-slate-300 rounded-lg w-[10%]">
+        <div className="absolute top-[20%] sm:top-[6%] bg-slate-300 rounded-lg sm:w-[10%] w-[50%]">
           <ul className="flex flex-col">{links.map(mapLink)}</ul>
         </div>
       )}

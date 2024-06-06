@@ -69,7 +69,7 @@ function AeronaveList() {
       {erro && <SnackBar message={erro.message} type="danger"/>}
       <div className="flex flex-col justify-center align-middle">
         <div className="flex m-auto gap-12 items-center">
-          <div className="text-[40px] text-center m-10 font-bold text-[#3758D0]">
+          <div className="text-xl sm:text-[40px] text-center m-10 font-bold text-[#3758D0]">
             Aeronaves disponíveis
           </div>
           <div>
@@ -104,7 +104,7 @@ function AeronaveList() {
     return (
       <div
         key={aeronave.id}
-        className=" bg-white grid grid-cols-4 gap-10 shadow-lg rounded-lg p-10 mb-2"
+        className="text-[10px] sm:text-base bg-white grid grid-cols-4 gap-10 shadow-lg rounded-lg p-10 mb-2"
       >
         <span>
           Sigla: <span className="font-bold">{aeronave.sigla}</span>
@@ -116,7 +116,7 @@ function AeronaveList() {
           Quantidade Assentos:{" "}
           <span className="font-bold">{aeronave.quantidadeAssentos}</span>
         </span>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Tooltip message="Editar Aeronave">
             <Link to={"/cia/aeronave/" + aeronave.id}>
               <img src="/images/edit.svg"></img>
